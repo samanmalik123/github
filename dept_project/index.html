@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Department Tour</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-indigo-50 to-blue-100 text-gray-800">
+
+<!-- Unified Dark Header -->
+<header class="bg-gradient-to-r from-indigo-800 to-blue-900 text-white sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+      <!-- Logo and Title -->
+      <div class="flex items-center space-x-3">
+        <img src="/abc.png" alt="Logo" class="h-10 w-auto">
+        <span class="text-xl font-semibold">Virtual Department Tour</span>
+      </div>
+  
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-6 items-center">
+        <a href="#features" class="text-gray-200 hover:text-white transition font-medium">Highlights</a>
+        <a href="#areas" class="text-gray-200 hover:text-white transition font-medium">Explore</a>
+        <a href="#contact" class="text-gray-200 hover:text-white transition font-medium">Contact</a>
+      </nav>
+  
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menuToggle" class="text-gray-200 hover:text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobileMenu" class="md:hidden hidden px-4 pb-4">
+      <a href="#features" class="block py-2 text-gray-200 hover:text-white">Highlights</a>
+      <a href="#areas" class="block py-2 text-gray-200 hover:text-white">Explore</a>
+      <a href="#contact" class="block py-2 text-gray-200 hover:text-white">Contact</a>
+    </div>
+  </header>
+  
+  
+
+<!-- Welcome Section with Light Pastel Gradient Background -->
+<section class="py-16 px-6 bg-gradient-to-r from-teal-200 via-sky-200 to-pink-200">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-10">
+  
+      <!-- Text Left with Fade-In -->
+      <div class="md:w-1/2 text-center md:text-left opacity-0 translate-x-10 animate__animated animate__fadeInLeft animate__delay-0.5s">
+        <h2 class="text-4xl font-bold text-indigo-700 mb-4">Welcome to the Department</h2>
+        <p class="text-indigo-700 text-lg">
+          Explore our cutting-edge facilities, state-of-the-art labs, and dynamic academic environment that fosters innovation and excellence.
+        </p>
+      </div>
+  
+      <!-- Image Right with Slide and Fade -->
+      <div class="md:w-1/2 opacity-0 translate-x-10 animate__animated animate__fadeInRight animate__delay-0.5s">
+        <img src="abc.png" alt="Department" class="rounded-xl shadow-md w-full">
+      </div>
+  
+    </div>
+  
+    <!-- Start Tour Button with Slide-Up Transition -->
+    <div class="text-center mt-8 opacity-0 translate-y-10 animate__animated animate__fadeInUp animate__delay-0.5s">
+      <a href="https://samanmalik123.github.io/github/fyp/" class="bg-indigo-600 text-white px-8 py-3 rounded-full text-xl hover:bg-indigo-700 transition duration-300 ease-in-out">
+        Start Tour
+      </a>
+    </div>
+  </section>
+  
+  
+  </section>
+  
+  
+  
+  
+
+  <!-- Features -->
+  <section id="features" class="py-16 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-center text-indigo-800 mb-10">Tour Highlights</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+        <h3 class="text-xl font-semibold mb-2 text-indigo-700">Modern Labs</h3>
+        <p>Equipped with the latest tech for AI, IoT, and Cybersecurity projects.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+        <h3 class="text-xl font-semibold mb-2 text-indigo-700">Experienced Faculty</h3>
+        <p>Learn from top-tier professors with real-world research experience.</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-6 text-center hover:shadow-2xl hover:-translate-y-1 transition duration-300">
+        <h3 class="text-xl font-semibold mb-2 text-indigo-700">Innovation Hub</h3>
+        <p>Students turn ideas into reality in our cutting-edge incubator spaces.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Toggle Section -->
+<section id="map-toggle" class="py-16 bg-white text-center">
+    <h2 class="text-3xl font-bold text-indigo-800 mb-8">Department Map</h2>
+  
+    <!-- Images -->
+    <div class="max-w-3xl mx-auto mb-6 relative">
+      <img id="groundMap" src="WhatsApp Image 2025-04-24 at 08.24.02_5e211385.jpg"
+           class="rounded-xl shadow-lg w-full transition-opacity duration-500 ease-in-out" />
+      <img id="firstMap" src="https://via.placeholder.com/800x500.png?text=First+Floor+Map"
+           class="rounded-xl shadow-lg w-full transition-opacity duration-500 ease-in-out absolute top-0 left-0 opacity-0 pointer-events-none" />
+    </div>
+  
+    <!-- Toggle Button -->
+    <button id="mapToggleBtn" onclick="toggleMap()"
+            class="bg-indigo-600 text-white px-6 py-2 rounded-full hover:bg-indigo-700 transition">
+      Show First Floor
+    </button>
+  </section>
+  
+
+  <!-- Explore Department -->
+  <section id="areas" class="py-14 bg-gradient-to-b from-blue-100 to-indigo-100 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold text-indigo-900 mb-8">Explore Department Areas</h2>
+    <div class="flex flex-wrap justify-center gap-4 px-4">
+      <button class="bg-white px-6 py-3 rounded-full shadow-md text-indigo-700 font-medium hover:bg-indigo-100 hover:scale-105 transition">Classrooms</button>
+      <button class="bg-white px-6 py-3 rounded-full shadow-md text-indigo-700 font-medium hover:bg-indigo-100 hover:scale-105 transition">Labs</button>
+      <button class="bg-white px-6 py-3 rounded-full shadow-md text-indigo-700 font-medium hover:bg-indigo-100 hover:scale-105 transition">Smart-lab</button>
+      <button class="bg-white px-6 py-3 rounded-full shadow-md text-indigo-700 font-medium hover:bg-indigo-100 hover:scale-105 transition">Coridoor</button>
+      <button class="bg-white px-6 py-3 rounded-full shadow-md text-indigo-700 font-medium hover:bg-indigo-100 hover:scale-105 transition">Stairs</button>
+    </div>
+  </section>
+
+<!-- Elegant Dark Footer -->
+<footer id="contact" class="bg-gradient-to-r from-indigo-800 to-blue-900 text-white py-10">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <h3 class="text-2xl font-semibold mb-2">Contact the Department</h3>
+      <p class="text-gray-300 mb-1">Email: csdept@university.edu</p>
+      <p class="text-gray-300 mb-4">Phone: +123 456 7890</p>
+      
+      <div class="flex justify-center space-x-6 mt-4">
+        <a href="#" class="text-gray-300 hover:text-white transition">Facebook</a>
+        <a href="#" class="text-gray-300 hover:text-white transition">Twitter</a>
+        <a href="#" class="text-gray-300 hover:text-white transition">LinkedIn</a>
+      </div>
+  
+      <p class="text-sm text-gray-400 mt-6">&copy; 2025 Computer Science and Information Technology Department. All rights reserved.</p>
+    </div>
+  </footer>
+  
+  
+
+  <script>
+    let isGroundVisible = true;
+  
+    function toggleMap() {
+      const groundMap = document.getElementById('groundMap');
+      const firstMap = document.getElementById('firstMap');
+      const button = document.getElementById('mapToggleBtn');
+  
+      if (isGroundVisible) {
+        groundMap.classList.add('opacity-0', 'pointer-events-none');
+        firstMap.classList.remove('opacity-0', 'pointer-events-none');
+        button.textContent = 'Show Ground Floor';
+      } else {
+        groundMap.classList.remove('opacity-0', 'pointer-events-none');
+        firstMap.classList.add('opacity-0', 'pointer-events-none');
+        button.textContent = 'Show First Floor';
+      }
+  
+      isGroundVisible = !isGroundVisible;
+    }
+  </script>
+  
+  
+
+</body>
+</html>
